@@ -1,5 +1,6 @@
 data/
 src/B*.ipynb
-
+__pycache__/
+*.pyc
 
 
