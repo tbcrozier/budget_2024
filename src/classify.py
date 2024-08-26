@@ -26,6 +26,10 @@ def recategorize_transactions(row):
         return 'shopping'
     elif 'acme feed' in row['Description']:
         return 'restaurants'
+    elif 'chase credit' in row['Description']:
+        return 'chase credit card payment' 
+    elif 'ach trans - select rwds pymt' in row['Description'] and row['Amount'] < -2792:
+        return 'vegas vacation airbnb'
     elif 'ach trans - select rwds pymt' in row['Description'] and row['Amount'] < -2792:
         return 'travel - Las Vegas climbing trip AirBNB + CC Payment'
     else:
@@ -46,10 +50,8 @@ def label_subscriptions(row):
         return 'subscription - fitness'
     elif 'fahrenheit yoga' in row['Description']:
         return 'subscription - fitness'
-    elif 'chase credit' in row['Description']:
-        return 'chase credit card payment' 
-    elif 'ach trans - select rwds pymt' in row['Description'] and row['Amount'] < -2792:
-        return 'vegas vacation airbnb'
+    elif 'chatgpt' in row['Description']:
+        return 'subscription - chatgpt'
     else:
         return row['Labels']
 

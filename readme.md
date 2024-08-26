@@ -22,3 +22,13 @@ What does the program currently do:
     - LookerStudio to visualize
 
 
+### Schema
+- Chase
+    - Transaction Date,Post Date,Description,Category,Type,Amount,Memo
+- Amex
+    - Date,Description,Amount
+- Bank
+    - "Date","ReferenceNo.","Type","Description","Debit","Credit","CheckNumber","Balance"
+
+
+
